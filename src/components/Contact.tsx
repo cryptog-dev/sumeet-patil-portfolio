@@ -71,14 +71,14 @@ export default function Contact({ darkMode }: ContactProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
             Let's Build Something <span className="text-gradient">Amazing</span>
           </h2>
           <p
-            className={`text-xl max-w-3xl mx-auto ${
+            className={`text-lg sm:text-xl max-w-3xl mx-auto px-4 ${
               darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
@@ -86,7 +86,7 @@ export default function Contact({ darkMode }: ContactProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           <div className="space-y-8">
             <div>
               <h3
@@ -163,7 +163,7 @@ export default function Contact({ darkMode }: ContactProps) {
                 >
                   Connect With Me
                 </h4>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap gap-3">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
@@ -171,13 +171,14 @@ export default function Contact({ darkMode }: ContactProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className={`w-12 h-12 rounded-lg flex items-center justify-center transition-all hover:scale-110 ${
+                      className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all hover:scale-105 ${
                         darkMode
                           ? 'bg-gray-800 border border-gray-700 text-gray-400 hover:text-white hover:border-primary-500'
                           : 'bg-white border border-gray-200 text-gray-600 hover:text-primary-600 hover:border-primary-500'
                       }`}
                     >
                       <social.icon size={20} />
+                      <span className="font-medium">{social.label}</span>
                     </a>
                   ))}
                 </div>
@@ -188,7 +189,7 @@ export default function Contact({ darkMode }: ContactProps) {
           <div>
             <form
               onSubmit={handleSubmit}
-              className={`p-8 rounded-3xl ${
+              className={`p-6 sm:p-8 rounded-3xl ${
                 darkMode
                   ? 'bg-gray-800 border border-gray-700'
                   : 'bg-white border border-gray-200 shadow-lg'

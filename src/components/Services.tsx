@@ -72,14 +72,14 @@ export default function Services({ darkMode }: ServicesProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
             Services That Drive <span className="text-gradient">Real Results</span>
           </h2>
           <p
-            className={`text-xl max-w-3xl mx-auto ${
+            className={`text-lg sm:text-xl max-w-3xl mx-auto px-4 ${
               darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
@@ -88,11 +88,11 @@ export default function Services({ darkMode }: ServicesProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative p-8 rounded-3xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${
+              className={`group relative p-6 sm:p-8 rounded-3xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${
                 darkMode
                   ? 'glass-dark hover:bg-gray-800/60'
                   : 'glass hover:bg-white/80 shadow-lg'

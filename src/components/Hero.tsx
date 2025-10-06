@@ -56,8 +56,16 @@ export default function Hero({ darkMode }: HeroProps) {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32 relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
+          <div className="flex justify-center mb-8">
+            <img
+              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Sumeet Patil"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary-500 shadow-2xl"
+            />
+          </div>
+
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/20">
             <Sparkles className="text-primary-500" size={16} />
             <span className={`text-sm font-medium ${darkMode ? 'text-primary-400' : 'text-primary-600'}`}>
@@ -66,7 +74,7 @@ export default function Hero({ darkMode }: HeroProps) {
           </div>
 
           <h1
-            className={`text-5xl md:text-7xl font-bold leading-tight ${
+            className={`text-4xl sm:text-5xl md:text-7xl font-bold leading-tight ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
@@ -76,7 +84,7 @@ export default function Hero({ darkMode }: HeroProps) {
           </h1>
 
           <p
-            className={`text-xl md:text-2xl max-w-3xl mx-auto ${
+            className={`text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto px-4 ${
               darkMode ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
@@ -84,10 +92,10 @@ export default function Hero({ darkMode }: HeroProps) {
             DeepSeek.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 pt-4 px-4">
             <a
               href="#contact"
-              className="group px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-xl flex items-center space-x-2 animate-glow"
+              className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:shadow-xl flex items-center justify-center space-x-2 animate-glow"
             >
               <span>Start Your Project</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -95,7 +103,7 @@ export default function Hero({ darkMode }: HeroProps) {
 
             <a
               href="#projects"
-              className={`px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105 border-2 ${
+              className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all hover:scale-105 border-2 text-center ${
                 darkMode
                   ? 'bg-white/5 border-white/20 text-white hover:bg-white/10'
                   : 'bg-white border-gray-200 text-gray-900 hover:border-primary-300 hover:bg-gray-50'
@@ -107,7 +115,7 @@ export default function Hero({ darkMode }: HeroProps) {
             <a
               href="/resume.pdf"
               download
-              className={`px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105 flex items-center space-x-2 ${
+              className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all hover:scale-105 flex items-center justify-center space-x-2 ${
                 darkMode
                   ? 'bg-accent-500/10 border-2 border-accent-500/30 text-accent-400 hover:bg-accent-500/20'
                   : 'bg-accent-50 border-2 border-accent-200 text-accent-700 hover:bg-accent-100'
@@ -118,7 +126,7 @@ export default function Hero({ darkMode }: HeroProps) {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-12 max-w-4xl mx-auto px-4">
             {animatedStats.map((stat, index) => (
               <div
                 key={index}

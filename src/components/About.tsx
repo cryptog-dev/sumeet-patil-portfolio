@@ -38,7 +38,7 @@ export default function About({ darkMode }: AboutProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
@@ -46,7 +46,7 @@ export default function About({ darkMode }: AboutProps) {
             <span className="text-gradient">Elegant Solutions</span>
           </h2>
           <p
-            className={`text-xl max-w-3xl mx-auto ${
+            className={`text-lg sm:text-xl max-w-3xl mx-auto px-4 ${
               darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
@@ -54,7 +54,7 @@ export default function About({ darkMode }: AboutProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
           <div className="space-y-6">
             <p
               className={`text-lg leading-relaxed ${
@@ -86,7 +86,7 @@ export default function About({ darkMode }: AboutProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {highlights.map((item, index) => (
               <div
                 key={index}

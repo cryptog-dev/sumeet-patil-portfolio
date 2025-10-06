@@ -66,14 +66,14 @@ export default function Testimonials({ darkMode }: TestimonialsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4 ${
               darkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
             Client <span className="text-gradient">Success Stories</span>
           </h2>
           <p
-            className={`text-xl max-w-3xl mx-auto ${
+            className={`text-lg sm:text-xl max-w-3xl mx-auto px-4 ${
               darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
@@ -81,11 +81,11 @@ export default function Testimonials({ darkMode }: TestimonialsProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`relative p-8 rounded-3xl transition-all hover:scale-105 ${
+              className={`relative p-6 sm:p-8 rounded-3xl transition-all hover:scale-105 ${
                 darkMode
                   ? 'bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700'
                   : 'bg-gradient-to-br from-white to-gray-50 border border-gray-200 shadow-lg'

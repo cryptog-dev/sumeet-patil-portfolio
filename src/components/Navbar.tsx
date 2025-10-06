@@ -36,7 +36,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
             : 'bg-white/90 backdrop-blur-lg shadow-lg border-gray-200/50'
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-6">
+        <div className="flex items-center justify-center h-16 px-6 relative">
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
@@ -51,7 +51,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
             ))}
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="absolute right-6 flex items-center space-x-4">
             <button
               onClick={toggleDarkMode}
               className={`p-2 rounded-lg transition-all hover:scale-110 ${
